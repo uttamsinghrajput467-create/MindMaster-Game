@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#101426">
+  <title>Mind Master | Number Puzzle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="brand">
+        <div class="brand-icon">✦</div>
+        <div>
+          <div class="eyebrow">BRAIN TRAINING</div>
+          <h1>Mind <span>Master</span></h1>
+        </div>
+      </div>
+      <div class="menu-wrapper">
+  <button class="icon-btn" id="menuBtn" aria-label="Open menu">⋮</button>
+
+  <div id="gameMenu" class="game-menu hidden">
+    <button id="soundMenuBtn">🔊 Sound: ON</button>
+    <button id="helpMenuBtn">❔ How to Play</button>
+    <button id="progressMenuBtn">🏆 My Progress</button>
+    <button id="resetMenuBtn">🔄 Reset Progress</button>
+  </div>
+</div>
+    </header>
+
+    <section id="homeScreen">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="pill">NUMBER PUZZLE</span>
+          <h2>Train your<br> <span>brain.</span></h2>
+          <p>Merge smart. Think ahead.<br>Reach the ultimate number.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="floating-tile t1">2</div>
+          <div class="floating-tile t2">4</div>
+          <div class="floating-tile t3">8</div>
+          <div class="floating-tile t4">16</div>
+          <div class="spark">✦</div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <span>YOUR BEST</span>
+          <strong id="homeBest">0</strong>
+        </div>
+        <div class="stat">
+          <span>COMPLETED</span>
+          <strong><b id="completedCount">0</b><small> / 20</small></strong>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <h3>Your journey</h3>
+          <p>20 challenges. One smart mind.</p>
+        </div>
+        <span class="mini-badge">20 LEVELS</span>
+      </div>
+
+      <div id="levelGrid" class="level-grid"></div>
+    <div class="creator-credit">
+  Created with ❤️ by&nbsp;<span>Shakti Uttam Singh</span>
+</div>
+    </section>
+
+    <section id="gameScreen" hidden>
+      <button id="backBtn" class="back-btn">← All levels</button>
+
+      <div class="level-heading">
+        <div>
+          <div class="eyebrow">CURRENT CHALLENGE</div>
+          <h2 id="levelTitle">Level 1</h2>
+        </div>
+        <div class="target-card">
+          <span>TARGET</span>
+          <strong id="targetValue">16</strong>
+        </div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span>Level progress</span>
+          <strong id="progressText">0%</strong>
+        </div>
+        <div class="progress-track">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      </div>
+
+      <div class="score-row">
+        <div class="score-card">
+          <span>LEVEL SCORE</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="score-card">
+          <span>BEST SCORE</span>
+          <strong id="best">0</strong>
+        </div>
+        <button id="restartBtn" class="restart-btn" aria-label="Restart level">↻</button>
+      </div>
+
+      <div class="game-instructions">
+        <span class="bulb">✦</span>
+        <span>Drag a block onto the same number to merge a line.</span>
+      </div>
+
+      <div id="board" class="board" aria-label="Number puzzle board"></div>
+
+<div class="creator-credit">
+  Created with ❤️  by <span>Shakti Uttam Singh</span>
+</div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-card">
+      <div id="modalIcon" class="modal-icon">✦</div>
+      <div class="eyebrow" id="modalEyebrow">LEVEL COMPLETE</div>
+      <h2 id="modalTitle">Brilliant!</h2>
+      <p id="modalText">You completed the challenge.</p>
+      <div class="modal-stats">
+        <div><span>SCORE</span><strong id="modalScore">0</strong></div>
+        <div><span>REWARD</span><strong id="modalStars">★★★</strong></div>
+      </div>
+      <button id="modalPrimary" class="primary-btn">Next level →</button>
+      <button id="modalSecondary" class="secondary-btn">Back to levels</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
